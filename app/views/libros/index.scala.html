@@ -1,0 +1,12 @@
+@(libros : Set[Libro])
+
+
+@layout("Libreria"){
+    <h1>Libros Index</h1>
+    @for(libro <- libros){
+        <a href="@routes.LibroController.show(libro.id)">@libro.title</a>
+        <p>@libro.price</p>
+        <p>@libro.author</p>
+    }
+    <a href="@routes.LibroController.create()">Crear libro</a>
+}

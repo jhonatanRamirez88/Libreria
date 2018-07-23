@@ -1,0 +1,9 @@
+@(libro: Libro)
+
+@layout("Mostrar Libro"){
+        <h2>@libro.title</h2>
+        <p>Price: @libro.price</p>
+        <p>Author: @libro.author</p>
+        <a href="@routes.LibroController.edit(libro.id)">Editar libro</a>
+        <a href="@routes.LibroController.delete(libro.id)">Eliminar libro</a>
+    }
